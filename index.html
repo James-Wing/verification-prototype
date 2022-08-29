@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My First Webpage</title>
+    <script>
+        /*function newID() {
+            function padLeadingZeros(num, size) {
+                var s = num + "";
+                while (s.length < size) s = "0" + s;
+                return s;
+            }
+
+            let ID = "NA" + padLeadingZeros(1, 5)
+
+            return "00001"
+        }
+
+
+        function display() { //get the name and display
+            displayID = newID();
+            alert(displayID);
+        }
+
+        document.getElementById("Submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            display();
+        });*/
+        var name; //name
+        console.log("hi from script");
+
+        function getName() { //get name
+            return document.getElementById("name").value;
+        }
+
+        function display() { //get the name and display
+            name = getName();
+            alert(name);
+        }
+
+        document.getElementById("Submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            display();
+        });
+    </script>
+</head>
+
+<body>
+    <form id='form' method='post'>
+        <p> Name: <input type="text" id="name" /></p>
+        <p><input id="Submit" type="button" value='Submit' /></p>
+    </form>
+</body>
+
+</html>
