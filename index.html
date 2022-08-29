@@ -4,29 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Webpage</title>
-    <script type = 'text/javascript'>
-        /*function newID() {
-            function padLeadingZeros(num, size) {
-                var s = num + "";
-                while (s.length < size) s = "0" + s;
-                return s;
-            }
-
-            let ID = "NA" + padLeadingZeros(1, 5)
-
-            return "00001"
-        }
-
-
-        function display() { //get the name and display
-            displayID = newID();
-            alert(displayID);
-        }
-
-        document.getElementById("Submit").addEventListener("click", function (event) {
-            event.preventDefault();
-            display();
-        });*/
+    <script type="text/javascript">
         var name; //name
         console.log("hi from script");
 
@@ -39,10 +17,19 @@
             alert(name);
         }
 
-        document.getElementById("Submit").addEventListener("click", function (event) {
+        let test = document.getElementById("Submit");
+        if (test) {
+            console.log('pass');
+            test.addEventListener("click", function (event) {
+                event.preventDefault();
+                display();
+            });
+        }
+
+        /*document.getElementById("Submit").addEventListener("click", function (event) {
             event.preventDefault();
             display();
-        });
+        });*/
     </script>
 </head>
 
